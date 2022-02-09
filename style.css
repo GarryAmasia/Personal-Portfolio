@@ -1,0 +1,142 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* ==============NAVIGATION SECTION===================== */
+
+/*  CREATING LOGO ANIMATION */
+.navigation {
+  /* width: 100%; */
+  padding: 1.5rem 2rem;
+  /* height: 40vh; */
+  background: black;
+  /* position: relative; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.g {
+  font-family: "Sacramento", cursive;
+}
+
+.navigation span {
+  color: white;
+  font-size: 2rem;
+  display: inline-block;
+  /* background: red; */
+  width: 2rem;
+  height: 2.3rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  margin: 0 -2px;
+  animation: logo-animation 2s linear infinite;
+}
+
+@keyframes logo-animation {
+  0% {
+    color: rgb(12, 255, 255);
+    box-shadow: 2px 4px 12px rgb(12, 255, 255, 1);
+    border: 1px solid rgb(12, 255, 255, 1);
+  }
+  33.3% {
+    color: #ff0;
+    box-shadow: 2px 4px 12px rgb(215, 238, 5);
+    border: 1px solid rgb(215, 238, 5, 1);
+  }
+  66.6% {
+    color: rgb(255, 47, 0);
+    box-shadow: 2px 4px 12px rgb(255, 47, 0);
+    border: 1px solid rgb(255, 47, 0, 1);
+  }
+  100% {
+    color: rgb(0, 255, 179);
+    box-shadow: 2px 4px 12px rgb(0, 255, 179);
+    border: 1px solid rgb(0, 255, 179, 1);
+  }
+}
+
+.navigation span:nth-child(1) {
+  animation-delay: 0s;
+}
+.navigation span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.navigation span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.navigation span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.navigation span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.navigation span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.navigation span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.navigation span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.navigation span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.navigation span:nth-child(10) {
+  animation-delay: 0.9s;
+}
+.navigation span:nth-child(11) {
+  animation-delay: 1s;
+}
+
+/* CREATING LINK NAV BAR MENU */
+.nav li {
+  display: inline-block;
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgb(196, 196, 196);
+  padding: 1rem 1.5rem;
+  letter-spacing: 0.1rem;
+  position: relative;
+  font-size: 0.8rem;
+}
+
+a::after {
+  content: "";
+  background: red;
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  left: 22px;
+  bottom: 10px;
+  transition: 0.2s;
+}
+
+a:hover::after {
+  width: 56%;
+}
+
+a:hover {
+  color: white;
+}
+
+/* ==============HERO SECTION===================== */
+
+.hero {
+  background: url(./assets/coffee-laptop1-removebg-preview.png);
+  width: 50%;
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-self: center;
+}
