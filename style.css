@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 /* ==============NAVIGATION SECTION===================== */
@@ -23,16 +23,12 @@ body {
   justify-content: space-between;
 }
 
-.g {
-  font-family: "Sacramento", cursive;
-}
-
 .navigation span {
   color: white;
   font-size: 2rem;
   display: inline-block;
   /* background: red; */
-  width: 2rem;
+  width: 2.4rem;
   height: 2.3rem;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -133,10 +129,62 @@ a:hover {
 /* ==============HERO SECTION===================== */
 
 .hero {
-  background: url(./assets/coffee-laptop1-removebg-preview.png);
-  width: 50%;
+  background: rgb(255, 255, 255);
   height: 80vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  align-self: center;
+  display: flex;
+  justify-content: center;
+  /* align-self: center; */
+  /* background: tomato; */
+}
+
+.hero-introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1rem;
+}
+
+.hero-introduction h1 {
+  /* position: relative; */
+  font-weight: 900;
+  position: relative;
+  /* color: white; */
+}
+
+h1::before,
+h1::after {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+h1::before {
+  background: white;
+  animation: typing 3s ease forwards 2s;
+}
+
+@keyframes typing {
+  to {
+    left: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    /* color: tomato; */
+  }
+
+  .logo {
+    width: 110%;
+    text-align: center;
+  }
 }
